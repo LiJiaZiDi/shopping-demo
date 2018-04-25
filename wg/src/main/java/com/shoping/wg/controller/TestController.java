@@ -10,11 +10,11 @@ import com.shoping.service.entity.UserEntity;
 @Controller
 @RequestMapping("test")
 public class TestController {
-	@RequestMapping(value="/test1")
-	@ResponseBody
-    public UserEntity HelloWorld(UserEntity userEntity){ 
+	
+	@RequestMapping(value = "/test1")
+	public @ResponseBody UserEntity HelloWorld(UserEntity userEntity) {
 		System.out.println(JSON.toJSONString(userEntity));
-        return userEntity;  
-    }  
+		return userEntity;
+	}
 
 }
